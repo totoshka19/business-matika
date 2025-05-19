@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Погода в Москве</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Форма входа -->
+    <div id="login-section" class="container">
+      <h2>Войти</h2>
+      <input type="text" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Пароль" />
+      <button onclick="login()">Войти</button>
+      <p id="error"></p>
+    </div>
+
+    <!-- Карточка погоды (изначально скрыта) -->
+    <div id="weather-section" class="container hidden">
+      <div class="weather-card">
+        <h2>Погода в Москве</h2>
+        <!-- Иконка погоды -->
+        <img id="weather-icon" src="" alt="Погода" />
+        <!-- Данные погоды -->
+        <p>Температура: <span id="weather-temp"></span>°C</p>
+        <p>Описание: <span id="weather-description"></span></p>
+        <p>Скорость ветра: <span id="weather-speed"></span> м/с</p>
+        <button onclick="logout()">Выйти</button>
+      </div>
+    </div>
+
+    <!-- Контейнер для ошибки загрузки погоды (изначально скрыт) -->
+    <div id="weather-error-section" class="container hidden">
+      <p id="weather-error-message"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
